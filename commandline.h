@@ -73,6 +73,7 @@ commandline_run(CommandLine *command, int argc, char **argv)
 	 */
 	if (argc >= 2 && (streq(argv[1], "--help") || streq(argv[1], "-h")))
 	{
+		commandline_print_usage(command, stdout);
 		(void) commandline_print_command_tree(command, stdout);
 		return;
 	}
